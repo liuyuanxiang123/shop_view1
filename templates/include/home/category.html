@@ -1,0 +1,19 @@
+<ul id="cate_id">
+    {% for category in categorys%}
+        <li>
+            <a>{{category.name }}</a>
+            <ul class="sub">
+                {% for sub in category.subs%}
+                    <li>
+                        <a href="#">{{ sub.name }}</a>
+                    <div>
+                        {% for sub2 in    sub.sub2 %}
+                            <a href="">{{ sub2.name }}</a>
+                        {% endfor %}
+                    </div>
+                    </li>
+                 {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>

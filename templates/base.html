@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/common.css'  %}">
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+    {% block  page_css%}
+    {% endblock %}
+    {% block  page_jq%}
+    {% endblock %}
+</head>
+<body>
+ <div id ='warp'>
+   <div>
+       {% block page_head %}
+       {% endblock %}
+   </div>
+   <div>
+       {% block page_main %}
+       {% endblock %}
+   </div>
+     <div>
+       {% block page_footer %}
+       {% endblock %}
+   </div>
+ </div>
+
+</body>
+</html>
